@@ -1,0 +1,17 @@
+// Convertidor de temperatura
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  int temp, celsius;
+  cout<<"Da la temperatura en grados Fahrenheit"<<endl;
+  cin>>temp;
+  celsius=5*(temp-32)/9;
+  cout<<"La temperatura en grados Celsius es de: " <<celsius<<endl;
+  if (celsius>=100) {
+    cout<<"El agua a la temperatura : " << celsius <<"hierve en condicones normales"<<endl; }
+    else {
+      cout<<"El agua a temperatura : " << celsius <<"no hierve en condiciones normales"<<endl; }
+      return 0;
+    }
