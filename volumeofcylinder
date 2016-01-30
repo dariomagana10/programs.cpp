@@ -1,0 +1,17 @@
+//Volume of a cylinder
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  float rad, hg, PI, vol;
+  PI=3.141592653589793238463;
+  cout<<"Type the value of the radius in centimeters"<<endl;
+  cin>>rad;
+  cout<<"Type the height of the cylinder in centimeters"<<endl;
+  cin>>hg;
+  vol = PI*rad*rad*hg;
+  cout<<"The volume of the cylinder with a radius of : " <<" " << rad <<" "<< "and a height of :" <<" "<< hg <<" "<< "is:" <<" " << vol <<" "<<"cm^3"<<endl;
+  return 0;
+}
