@@ -1,0 +1,28 @@
+//Random Number Guessing
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main() {
+  int rnum, num, times;
+  times=0;
+  srand(time(NULL));
+  rnum=rand() %100+1;
+  do {
+    cout<<"Type a number between 1 and a 100 to see if you can guess"<<endl;
+    cin>>num;
+    if (num<rnum) {
+      cout<<"The number: "<<" "<<num<<" "<<"is too low, try typing a higher one"<<endl; }
+      else if (num>rnum) {
+        cout<<"The number "<<" "<<num<<" "<<"is to high, try typing a lower one"<<endl; }
+        else { cout<<"Congrats pal, you guessed the random number"<<endl;
+      }
+      times=times+1;
+    }
+      while (num!=rnum);
+      cout<<"You tried to guess the number: "<<" "<<times<<" "<<"times"<<endl;
+  return 0;
+}
