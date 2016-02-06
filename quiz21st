@@ -1,0 +1,28 @@
+//Function, times to the...
+#include <iostream>
+
+using namespace std;
+int superpower(int num1,int num2, int val,int tim) {
+  tim=0;
+  val=1;
+  if (num2>=2) {
+do {
+  val=val*num1;
+  tim=tim+1; }
+  while (tim!=num2); }
+  else {
+    cout<<"The second value you typed is not valid"<<endl; }
+    return val;
+  }
+
+  int main() {
+    int val, num1, num2, tim;
+  cout<<"Type the first parameter"<<endl;
+  cin>>num1;
+  cout<<"Type the second parameter"<<endl;
+  cin>>num2;
+  val=superpower(num1,num2,val,tim);
+  cout<<"The result is: "<<" "<<val<<endl;
+
+  return 0;
+}
