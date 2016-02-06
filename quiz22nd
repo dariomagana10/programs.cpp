@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int stars(int tim, int num) {
+tim =0;
+do {
+  cout<<"*";
+  tim=tim+1; }
+  while(tim!=num);
+return tim;
+}
+
+int main(){
+  int num, tim;
+  char shine;
+  cout<<"This program print the number of stars you indicate"<<endl;
+  cout<<"How many stars you want the console to show?"<<endl;
+  cin>>num;
+  shine = stars(tim, num);
+  return 0;
+}
