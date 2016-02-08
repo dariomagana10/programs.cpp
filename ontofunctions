@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int addition(int num1, int num2)
+{
+int add;
+  add=num1+num2;
+  return add;
+}
+
+int substraction(int num1, int num2)
+{
+  int subs;
+  subs=num1-num2;
+  return subs;
+}
+
+int product(int num1, int num2)
+{
+  int prod;
+  prod=num1*num2;
+  return prod;
+}
+
+int division(int num1, int num2)
+{
+int divi;
+divi=num1/num2;
+return divi;
+}
+
+int remainder(int num1, int num2)
+{
+int rem;
+rem=num1%num2;
+return rem;
+}
+
+int main() {
+  int add, subs, prod, divi, rem, num1, num2;
+  cout<<"This program does the addition, substraction, product, division and remainder of two numbers"<<endl;
+  cout<<"Type the first number"<<endl;
+  cin>>num1;
+  cout<<"Type the second number"<<endl;
+  cin>>num2;
+  add= addition(num1, num2);
+  subs= substraction(num1, num2);
+  prod= product(num1, num2);
+  divi= division(num1, num2);
+  rem= remainder(num1, num2);
+  cout<<"The result of the addition is :"<<" "<<add<<endl;
+  cout<<"The result of the substraction is :"<<" "<<subs<<endl;
+  cout<<"The result of the product is: "<<" "<<prod<<endl;
+  cout<<"The result of the division is: "<<" "<<divi<<endl;
+  cout<<"The remainder of the division is: "<<" "<<rem<<endl;
+  return 0;
+}
