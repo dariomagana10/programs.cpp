@@ -1,0 +1,31 @@
+//Factorial of a number
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  int n, i, res;
+  string des;
+
+  do {
+    i=1;
+    res=1;
+  cout<<"This program do the factorial operations of a number"<<endl;
+  cout<<"Give me a non negative integer number"<<endl;
+  cin>>n;
+  if (n>0) {
+    do {
+      res=res*(i+1);
+    i=i+1;
+  cout<<"The factorial of the number: "<<" "<<i<<" "<<"is: "<<" "<<res<<endl; }
+      while(i!=n);
+
+    }
+    else {
+      cout<<"The value is not positive, try again"<<endl; }
+      cout<<"Would you like to do the proccess again? yes or no?"<<endl;
+      cin>>des;
+    } while(des=="yes");
+    cout<<"Thanks for proving my program"<<endl;
+    return 0;
+  }
