@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+float distance(int x1, int x2, int y1, int y2) {
+  int a, b;
+  float dist;
+  a=x2-x1;
+  b=y2-y1;
+  dist=sqrt(a*a+b*b);
+  return dist;
+}
+
+int main() {
+  int a, b, x1, x2, y1, y2;
+  float dist;
+  cout<<"This program calculates the distance between two points (integers) in a cartesian plane"<<endl;
+  cout<<"Type the first x value of the first point"<<endl;
+  cin>>x1;
+  cout<<"Ok, now type the y value of the first point"<<endl;
+  cin>>y1;
+  cout<<"Type the x value of the second point"<<endl;
+  cin>>x2;
+  cout<<"Perfect! now type the y value of the second point"<<endl;
+  cin>>y2;
+  dist= distance(x1, x2, y1, y2);
+  cout<<"The distance between the points is: "<<" "<<dist;
+  return 0;
+}
