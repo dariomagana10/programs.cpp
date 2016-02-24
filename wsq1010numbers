@@ -1,0 +1,47 @@
+#include <iostream>
+#include <cmath>
+using std::endl;
+using std::cout;
+using std::cin;
+
+float total(float numbers[], int numberofnum) {
+  float ans = 0;
+  for (int i=0; i<numberofnum; i=i+1) {
+    ans=ans+numbers[i];
+  }
+  return ans;
+}
+
+float average(float numbers[], int numberofnum) {
+  float ans=(total(numbers, numberofnum))/numberofnum;
+  return ans;
+}
+float standartdeviation(float numbers[], int numberofnum) {
+  float add=0;
+  for (int i=0; i<numberofnum; i=i+1){
+    float ans=pow(average(numbers, numberofnum)-numbers[i], 2);
+    add=add+ans; }
+    float s=sqrt(add/(numberofnum-1));
+    return s;
+  }
+
+int main() {
+    const int NUMOFNUM = 10;
+    int numberofnum;
+  float numbers[NUMOFNUM];
+  cout<<"This program does a lot of stuff, statistic stuff"<<endl;
+  cout<<"You must type 10 values(integers or decimals)"<<endl;
+  cout<<"The program will show the total, average and standart deviation"<<endl;
+  cout<<"Time to type m8"<<endl;
+  for(int i=0; i<NUMOFNUM; i=i+1) {
+    cout<<"Type the"<<" "<<i+1<<" "<<"value buddie"<<endl;
+    cin>>numbers[i];
+  }
+  float sum= total(numbers, NUMOFNUM);
+  cout<<"The total/addition of all the digits is :"<<" "<<sum<<endl;
+  float ave=average(numbers, NUMOFNUM);
+  cout<<"The average of the numbers is: "<<" "<<ave<<endl;
+  float stddev=standartdeviation(numbers, NUMOFNUM);
+  cout<<"The standart deviation of the data is :"<<" "<<stddev<<endl;
+  return 0;
+}
