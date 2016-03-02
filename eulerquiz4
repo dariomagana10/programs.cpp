@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int factorial(int x) {
+if(x==0) {
+  return 1; }
+else {
+  return x*factorial(x-1); }
+}
+long double eulerCal(float precision) {
+  long double e=0, previous=e;
+  int n=0;
+  do {
+    previous=e;
+  e=e+1.0/factorial (n);
+n=n+1; }
+  while((e-previous)>precision);
+  return e;
+}
+
+int main() {
+  long double prec;
+  cout<<"Give the precision to determinate until wich value the program will run"<<endl;
+  cin>>prec;
+  cout<<"The Euler value with precision of:"<<" "<<prec<<" "<<"is: "<<" "<<eulerCal(prec)<<endl;
+  return 0;
+}
