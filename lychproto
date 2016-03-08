@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+#include "BigIntegerLibrary.hh" //BigInteger library
+
+
+BigInteger swap(BigInteger val) {//Turning values function
+  BigInteger changed=0;
+  while(val>0) {
+  changed=(changed*10)+(val%10);
+  val=val/10;
+ }
+  return changed;
+  }
+
+  BigInteger lychrel(int range[], int low, int size, BigInteger value) {
+    int lych=0, firstTry=0, moreTries=0, tries=0;//The counters start in 0
+    for(int i=0; i<=size; i=i+1) { //The for loop will be done until the i value equals the difference in the range
+      range[i]=low+i;//The values will be starting in the lower bound +i(increasing 1 with every loop)
+      value=range[i]+swap(range[i]); //It add the taken value with its changed
+      if(value==swap(value)) {//now here, if the result of the last addition is the same as its new changed it adds 1 to the firstTry palindrome
+        firstTry=firstTry+1; }
+        else { //If its not, now we have two cases, if its a palondrome after less than 30 tries of if its maybe a lychrel number
+        do { //Will do a loop while the tries are less than 30 OR while the value is different than its changed
+          value=value+swap(value);//Here it add the last value with its changed
+          tries=tries+1;}//increasing the tries with every loop
+          while(value!=swap(value)||tries<30);//The while we´re talking above
+          if(tries>=29) {//And here, if the loop ended because of the tries, its a lychrel candidate
+            lych=lych+1; }
+            else {//If the loop ended because of the comparison of the value and its changed
+              moreTries=moreTries+1; } } }//It add 1 to the counter of moreTries
+            cout<<"The total lych numbers: "<<lych<<endl;//It shows all the counters
+          cout<<"The moretries numbers: "<<moreTries<<endl;
+          cout<<"The first try :"<<firstTry<<endl;
+              return value;//Here idk which value i must return
+            }
+
+
+  int main() {
+    BigInteger value;
+    int diff, high, low;
+    cout<<"Give the lower bound of the range of numbers"<<endl;//Get the range of numbers
+    cin>>low;
+    cout<<"Give the upper bound of the range of numbers"<<endl;
+    cin>>high;
+    diff=high-low;//The difference between the two numbers given by the user will be the size of inside the range[]
+    int range[diff];
+    cout<<lychrel(range, low, diff, value)<<endl;
+    return 0;
+  }
