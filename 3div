@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int threesAdd(int range[], int numOfNum) {
+  int total=0;
+  int divi=0;
+  int val;
+  for(int i=0; i<numOfNum; i=i+1){
+    val=range[i];
+    if(val%3==0){
+      cout<<val<<" "<<"Is divisible so it goes to the addition"<<endl;
+      divi=divi+1;
+      total=total+val;}
+      else { } }
+      cout<<"The total divisble numbers:"<<" "<<divi<<" ";
+        return total; }
+
+
+int main() {
+  int values;
+  cout<<"This program evaluates a range of numbers and make a total addition"<<endl;
+  cout<<"But it only add the ones which are divisibles by 3"<<endl;
+  cout<<"How many values you will type?"<<" ";
+  cin>>values;
+  int range[values];
+  for(int i=0; i<values; i=i+1){
+  cout<<"Type the"<<" "<<i+1<<" "<<"number"<<endl;
+  cin>>range[i]; }
+    cout<<"The total addition of the no.3 divisibles is:"<<" "<<threesAdd(range, values)<<endl;
+    return 0;
+  }
