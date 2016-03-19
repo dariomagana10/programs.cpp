@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int euclidianAlgo(int first, int second){
+  int tem=0;
+  int res=first%second;
+  while(res!=0){
+    first=second;
+    second=res;
+    res=first%second; }
+
+       return second; }
+
+
+
+int main() {
+  int first, second, val;
+  cout<<"This program does the Euclidian Algorithm of the range of numbers you give"<<endl;
+  cout<<"Type the lower value"<<endl;
+  cin>>first;
+  cout<<"Ok now type the higher value"<<endl;
+  cin>>second;
+  val=euclidianAlgo(first, second);
+  cout<<"The greatest denominator of the two numbers is: "<<" "<<val<<endl; }
