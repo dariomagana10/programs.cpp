@@ -1,0 +1,28 @@
+//Miguel Darío Magaña Heredia A01631435
+#include <iostream>
+using namespace std;
+
+int triangles(int size){
+int t=0, i=0;
+do{
+for(i=0; i!=t && i<size; i=i+1) {
+  cout<<"T"; }
+  cout<<" "<<endl;
+  t=t+1; }
+while(t<=size);
+  t=size;
+  do{
+    for(i=0; i!=t; i=i+1){
+      cout<<"T"; }
+      cout<<" "<<endl;
+      t=t-1; }
+      while(t!=0);
+}
+
+int main(){
+int top;
+cout<<"Type the size of the triangle"<<endl;
+cin>>top;
+cout<<triangles(top);
+return 0;
+}
