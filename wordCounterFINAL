@@ -1,0 +1,43 @@
+include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int lineCounter(string str,string word){
+  int found;
+  int count=0;
+  int i=0;
+  while(1){
+    found=str.find(word,i);
+    i=found+1;
+    if(found!=-1) count++;
+    else break;
+  }
+  return count;
+}
+
+int textCounter(string file, string word){
+  int count=0;
+  string line;
+  ifstream myfile;
+  myfile.open(file.c_str());
+  if(myfile.is_open())
+  while(getline(myfile,line))
+  count+=lineCounter(line,word);
+  else cout<<"Unvalid file"<<endl;
+  myfile.close();
+  return count;
+}
+
+
+int main(){
+  string file, word;
+  cout<<"WELCOME"<<endl;
+  cout<<"This program counts the appearances of a certain word in a text file"<<endl;
+  cout<<"Type the name of the file(don´t forget the .txt)"<<endl;
+  getline(cin,file);
+  cout<<"OK, now type the word"<<endl;
+  getline(cin, word);
+  int appa=textCounter(file, word);
+  cout<<"The appearances of the word are: "<<appa<<endl;
+}
