@@ -1,0 +1,18 @@
+He aquí la lista de colores, revisa bien antes de teclear
+
+
+*1era/2da banda/Multiplicador	  	|	*4ta banda(Tolerancia*
+					|
+					|
+1.   NEGRO				| 1. ORO
+2.   MARRON				| 2. PLATA
+3.   ROJO				| 3. MARRON
+4.   NARANJA				| 4. ROJO
+5.   AMARILLO				| 5. VERDE
+6.   VERDE				| 6. AZUL
+7.   AZUL				| 7. VIOLETA
+8.   VIOLETA				| 8. GRIS
+9.   GRIS				| 9. SIN COLOR
+10.  BLANCO				|
+11.  ORO				|
+12.  PLATA				|
